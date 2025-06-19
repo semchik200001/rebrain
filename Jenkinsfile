@@ -1,1 +1,1 @@
-echo "Build from MAIN branch"
+echo "Build from DEV branch"
