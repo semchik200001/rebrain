@@ -1,11 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Main') {
+        stage('Production Deploy') {
+            when {
+                expression {
+                    return env.GIT_TAG != null
+                }
+            }
             steps {
-                echo 'Build from MAIN branch'
+                echo "This is MAIN with TAG: ${env.GIT_TAG}"
             }
         }
     }
 }
-
