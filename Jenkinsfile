@@ -1,11 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Dev') {
+        stage('Dev Build') {
             steps {
-                echo 'Build from DEV branch'
+                echo 'This is DEV'
             }
         }
     }
 }
-
